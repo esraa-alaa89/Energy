@@ -1,0 +1,813 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: "Inter", sans-serif;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: rgba(60, 171, 144, 1);
+}
+:root{
+    --main-color: #0B9586;
+    --nested-color: #FFBB1C;
+    --text-color: #fff;
+}
+
+/* ****************navigation**************** */
+nav{
+    background-color: var(--main-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999999999999;
+    font-size: 18px;
+    line-height: 21.78px;
+    letter-spacing: 0.94px;
+}
+nav .nav-container{
+    color: var(--text-color);
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 157px;
+    height: 54px;
+    align-self: center;
+}
+nav .nav-container ul{
+    /* background-color: #6b5ad9; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-self: center;
+}
+nav .nav-container ul li{
+    margin: 10px;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    padding: 8px 28px;
+    cursor: pointer;
+}
+nav .nav-container ul li a{
+    color: var(--text-color);
+}
+.nav-contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    /* background-color: #841010; */
+}
+.nav-contact p:first-child{
+    align-self: flex-end;
+    padding-bottom: 9px;
+    margin: 0;
+}
+.nav-contact p:last-child{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    padding-top: 9px;
+    margin: 0;
+}
+nav button{
+    background-color: rgba(60, 171, 144, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+nav button i{
+    color: var(--text-color);
+    font-size: 20px;
+    padding: 14px;
+}
+#nav-list{
+    display: none;
+    width: 100%;
+    margin: auto;
+    background-color: #000;
+}
+#nav-list ul{
+    display: block;
+    margin: 0;
+    padding: 0;
+    padding: 0 20px;
+}
+#nav-list ul li{
+    padding: 10px 0;
+}
+
+/* ****************main section**************** */
+main{
+    background-image: url(../images/solar-panels-meadow\ 1.png);
+    background-size: contain;
+    background-position: center center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+main .main-content, .installer-info, .power-of-installer .power-content, .solar .solar-container, .solar .solar-container .solar-text, .energy .energy-container, .values .values-container, .feedback .feedback-container, footer .footer-container{
+    width: 80%;
+    margin: auto;
+    color: var(--text-color);
+}
+main .main-content h1{   
+    width: 48%;
+    font-size: 52px;
+    padding-top: 0;
+    margin-top: 0;
+}
+main .main-content p{
+    width: 48%;   
+}
+main .main-content button, .installer .power-of-installer .power-content button{   
+    margin-right: 10px;
+    margin-top: 20px;
+    padding: 12px 36px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+main .main-content button:hover, .installer .power-of-installer .power-content button:hover{   
+    box-shadow: 2px 2px 20px 0 rgba(28, 28, 28, 1);
+}
+
+main .main-content button:first-of-type{   
+   background-color: var(--main-color);
+   color: #fff;
+}
+main .main-content button:last-of-type, .power-of-installer .power-content button{   
+   background-color: var(--nested-color);
+}
+
+/* ****************installer section**************** */
+.installer{
+   background-color: rgb(135, 202, 177);
+}
+.installer-info{
+    padding: 40px 0;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+}
+.installer-text{
+    width: 50%;
+    padding: 25px 0;
+}
+.installer-text ul{
+    padding-left: 0;
+    padding: 20px 0;
+}
+.installer-text ul li{
+    padding: 8px 0;
+}
+.installer-text ul li span{
+    color: var(--main-color);
+    padding-right: 5px;
+}
+.installer-text h2, .power-of-installer .power-content h4, .solar .solar-container .solar-text h2, .solar-fixed-bg .fixed-bg-container h2, .energy .energy-heading h2, .values .values-text h2, .feedback .feedback-text h2{
+    font-size: 42px;
+    font-weight: 600;
+    padding-top: 0;
+    margin-top: 0;
+}
+.installer-img{
+    padding: 25px 0;
+    position: relative;
+}
+.installer-img img{
+    width: 100%;
+    border-radius: 20px;
+}
+.installer-over-img{
+    background-color: var(--nested-color);
+    width: 30%;
+    position: absolute;
+    bottom: 10%;
+    left: -10%;
+    border-radius: 12px;
+    padding: 24px 30px;
+}
+.installer-over-img div{
+    text-align: center;
+    font-size: 24px;
+}
+.installer-over-img p{
+    font-size: 14px;
+    line-height: 20.95px;
+}
+.power-of-installer{
+    background-image: url(../images/8116\ 1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+}
+.power-of-installer .power-content .power-text{
+    width: 60%;
+    padding: 40px 0;
+}
+.power-of-installer .power-content .power-text p, .solar-fixed-bg .fixed-bg-container p{
+    font-size: 20px;
+    line-height: 28px;
+}
+
+/* ****************solar section**************** */
+.solar, .energy, .values, .feedback{
+    margin: 40px 0;
+} 
+.solar .solar-text, .values .values-text, .feedback .feedback-text{
+    width: 90%;
+    margin: 30px auto;
+    color: #000;
+    text-align: center;
+}
+.solar .solar-container, .energy .energy-container, .values .values-container{
+    display: flex;
+    justify-content: space-between;
+}
+.solar .solar-container .solar-item{
+    background-color: rgba(255, 255, 255, 1);
+    color: #000;
+    padding: 20px;
+    box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.05);
+    margin-right: 24px;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+.solar .solar-container .solar-item img{
+    width: 100%;
+    transition: all 0.5s;
+}
+.solar .solar-container .solar-item:hover img{
+    transform: scale(1.1, 1.1);
+}
+.solar .solar-container .solar-item:last-child, .values .values-container .values-item:last-child{
+    margin-right: 0;
+}
+.solar .solar-container .solar-item h5{
+    font-size: 20px;
+}
+.solar .solar-container .solar-item .solar-link, .energy .energy-item .energy-link{
+    color: rgba(60, 171, 144, 1);
+}
+.solar .solar-container .solar-item .solar-link a, .energy .energy-item .energy-link a{
+    color: rgba(60, 171, 144, 1);
+    text-decoration: none;
+    padding-right: 10px;
+}
+.solar-fixed-bg{
+    background-image: url(../images/8116\ 1\ \(1\).png);
+    background-attachment: fixed;
+    padding: 32px;
+    margin: 40px 0;
+}
+.fixed-bg-container{
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.57);
+    color: var(--text-color);
+    border-radius: 12px;
+    margin: auto;
+    padding: 44px;
+    text-align: center;
+}
+
+/* ****************energy section**************** */
+.energy{
+    background-color: rgba(255, 187, 28, 0.05);
+    padding-top: 40px;
+}
+.energy .energy-container, .values .values-container{
+    display: flex;
+}
+.energy .energy-container .energy-heading, .energy .energy-container .energy-content{
+    margin-right: 32px;
+}
+.energy .energy-container .energy-content:last-of-type{
+    margin-right: 0;
+}
+.energy .energy-heading{
+    color: rgba(16, 24, 40, 1);
+    margin-right: 20px;
+}
+.energy .energy-container .energy-item{
+    /* width: 40%; */
+    color: rgba(16, 24, 40, 1); 
+    border: 1px solid rgba(60, 171, 144, 1);    ;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 40px;
+}
+.energy .energy-heading .energy-icon{
+    width: 10px;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(60, 171, 144, 1);
+    color: #fff;
+    border: 21px solid rgba(60, 171, 144, 0.15);
+    border-radius: 10px;
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+.energy .energy-item .energy-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 20px solid rgba(60, 171, 144, 0.15);
+    border-radius: 10px;
+    position: relative;
+}
+.overlay-img{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(60, 171, 144, 0.15);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+
+/* ****************values section**************** */
+.values .values-container .values-item{
+    background-color: rgba(60, 171, 144, 0.05);
+    color: #000;
+    padding: 32px;
+    border: 1px solid rgba(60, 171, 144, 1);
+    border-radius: 12px;
+    margin-right: 20px;
+}
+.values .values-container .values-item i, .feedback .feedback-content:first-child i{
+    color: rgba(60, 171, 144, 1);
+    font-size: 52px;
+}
+
+/* ****************feedback section**************** */
+.feedback-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.feedback-content{
+    background-color: rgba(60, 171, 144, 0.06);
+    color: rgba(16, 24, 40, 1);
+    border-radius: 24px;
+    padding: 40px 0;
+}
+.feedback .feedback-content:first-of-type{
+    background-color: transparent;
+    border: none;
+    border-radius: none;
+    margin-right: 20px;
+}
+.feedback .feedback-content:first-child h4{
+    font-size: 48px;
+    padding: 20px 0;
+    margin: 0;
+}
+.feedback .feedback-container .feedback-content:last-of-type{
+    padding: 30px;
+}
+.feedback .feedback-container .feedback-content:last-of-type p{
+    font-size: 24px;
+    line-height: 36px;
+}
+.feedback-title{
+    display: flex;
+    justify-content: space-between;
+    color: rgba(60, 171, 144, 0.15);
+}
+.feedback-title span, .feedback-icon i:first-of-type{
+    color: rgba(60, 171, 144, 1);
+    font-size: 18px;
+}
+.feedback-item{
+    color: rgba(28, 28, 28, 1);
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19.36px;
+}
+.feedback-item-left, .feedback-item-right, .footer-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.feedback-item-text h5, .feedback-item-text p{
+    padding: 0;
+    margin: 0;
+}
+.feedback-item .feedback-item-left img{
+    width: 50px;
+    height: 50px;
+    padding-right: 20px;
+    border-radius: 50%;
+}
+.feedback-item .feedback-item-right div{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(28, 28, 28, 1);
+    border-radius: 50%;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.feedback-item .feedback-item-right div:hover{
+    background-color: var(--main-color);
+    color: rgba(28, 28, 28, 1);
+}
+
+/* ****************footer section**************** */
+footer{
+    background-color: rgba(40, 54, 70, 1);
+    padding: 40px 0;
+}
+.footer-container{
+    padding: 40px 0;
+}
+.footer-content{
+    justify-content: space-between;
+}
+.footer-content .left-footer-text img{
+   width: 130px;
+   height: 40px;
+}
+.footer-content .left-footer-text ul{
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+.footer-content .left-footer-text ul li{
+    padding-right: 20px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.3px;
+}
+.right-footer-text{
+    width: 40%;
+    position: relative;
+    padding: 20px;
+    box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.05);
+    background-color: rgba(179, 189, 199, 1);
+    border-radius: 10px;
+}
+.footer-inputs{
+    position: relative;
+}
+.right-footer-text input:first-of-type{
+    width: 100%;
+    padding: 15px 0 15px 15px;
+    border: 1px solid rgba(179, 189, 199, 1);
+    border-radius: 50px;
+}
+.right-footer-text #subscribe-input{
+    background-color: var(--nested-color);
+    color: var(--text-color);
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    right: 10px;
+    padding: 6px 15px;
+    border: 1px solid rgba(179, 189, 199, 1);
+    border-radius: 50px;
+    cursor: pointer;
+}
+.right-footer-text input:focus{
+    border: 1px solid rgba(179, 189, 199, 1) !important;
+}
+footer hr{
+    margin: 40px 0;
+    color: rgba(0, 0, 0, 0.57) !important;
+    background-color: rgba(0, 0, 0, 0.57) !important;
+}
+.left-footer span{
+    margin-right: 20px;
+    position: relative;
+}
+.left-footer span::after{
+    content: '';
+    background-color: rgba(0, 0, 0, 0.57);
+    width: 1px;
+    height: 10px;
+    position: absolute;
+    top: 0;
+    right: -14px;
+    bottom: 50px;
+}
+
+
+/* ****************media query**************** */
+@media screen and (min-width:0px ) and (max-width:900px ) {
+    /* ****************navigation section**************** */
+    nav .nav-container{
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+    nav .nav-contact p:first-child{
+        align-self: center;
+    }
+    nav .nav-contact p:last-child{
+        font-size: 15px;
+        line-height: 14px;
+    }
+    nav img{
+        width: 100px;
+        height: 34px;
+    }
+    nav .nav-container ul{
+        display: none;
+    }
+    nav button{
+        display: inline;
+    }
+
+    /* ****************main section**************** */
+    main{
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    main .main-content, .installer-info, .power-of-installer .power-content, .solar .solar-container, .energy .energy-container, .values .values-container, .feedback .feedback-container, footer .footer-container{
+        width: 90%;
+        margin: auto;
+    }
+    main .main-content h1{   
+        width: 100%;
+        font-size: 32px;
+        padding-bottom: 40px;
+    }
+    main .main-content p{
+        width: 100%;
+        padding-bottom: 40px;
+        line-height: 24px;
+    }
+    main .main-content button, .installer .power-of-installer .power-content button{
+        display: block;
+        margin: auto;
+        padding: 12px 26px;
+    }
+    main .main-content button{
+        margin: 0;
+        margin-right: 20px;
+    }
+    .main-btn{
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* ****************installer section**************** */
+    .installer-info{
+        display: block;
+    }
+    .installer-text{
+        /* background-color: lawngreen; */
+        width: 100%;
+    }
+    .installer-text h2, .power-of-installer .power-content h4, .solar .solar-container .solar-text h2, .solar-fixed-bg .fixed-bg-container h2, .energy .energy-heading h2, .values .values-text h2, .feedback .feedback-text h2{
+        font-size: 26px;
+    }
+    .installer-img{
+        padding: 25px 0;
+        position: relative;
+    }
+    .installer-img img{
+        width: 100%;
+        border-radius: 20px;
+    }
+    .installer-over-img{
+        width: 40%;
+        /* bottom: -5%; */
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 14px 20px;
+    }
+    .power-of-installer .power-content .power-text{
+        width: 100%;
+    }
+
+    /* ****************solar section**************** */
+    .solar .solar-container{
+    display: block;
+    }
+    .solar .solar-container .solar-item{
+        width: 100%;
+        margin-right: 0;
+    }
+    .solar-fixed-bg{
+        padding: 32px 0;
+    }
+    .fixed-bg-container{
+        width: 85%;
+        padding: 12px;
+    }
+
+    /* ****************energy section**************** */
+    .energy{
+        background-color: rgba(255, 187, 28, 0.05);
+    }
+    .energy .energy-container, .values .values-container{
+        display: block;
+    }
+    .energy .energy-container .energy-heading, .energy .energy-container .energy-content{
+        width: 100%;
+        margin-right: 0;
+    }
+
+    /* ****************values section**************** */
+    .values .values-container .values-item{
+        width: 100%;
+        padding: 22px;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    /* ****************feedback section**************** */
+    .feedback-container{
+        display: block;
+    }
+    .feedback-content{
+        width: 100%;
+        padding: 20px;
+    }
+    .feedback .feedback-content:first-of-type{
+        width: 100%;
+        padding: 0;
+        margin-right: 0;
+    }
+    .feedback .feedback-content:first-child h4{
+        font-size: 40px;
+    }
+    .feedback-item{
+        display: block;
+    }
+
+    /* ****************footer section**************** */
+    .footer-content{
+        display: block;
+    }
+    .right-footer-text{
+        width: 100%;
+    }
+    .left-footer span{
+        margin-right: 20px;
+        margin-bottom: 20px;
+        position: relative;
+    }
+    .left-footer span::after{
+        content: '';
+        background-color: rgba(0, 0, 0, 0.57);
+        width: 1px;
+        height: 30px;
+        position: absolute;
+        top: 0;
+        right: -14px;
+        bottom: 20px;
+    }
+}
+
+@media screen and (min-width:901px ) and (max-width:1100px ) {
+    /* ****************navigation section**************** */
+    nav .nav-container{
+        width: 100%;
+        margin: auto;
+        padding: 20px;
+    }
+    nav img{
+        width: 120px;
+        height: 44px;
+    }
+    nav .nav-contact p:first-child{
+        align-self: center;
+    }
+    nav .nav-contact p:last-child{
+        font-size: 18px;
+    }
+    /* ****************installer section**************** */
+    .installer-text{
+        width: 80%;
+    }
+    .installer-img{
+        padding: 25px 0;
+        padding-left: 20px;
+    }
+    .installer-over-img{
+        width: 50%;
+        bottom: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .power-of-installer{
+        background-position: center center;
+    }
+    .power-of-installer .power-content .power-text{
+        width: 70%;
+    }
+
+    /* ****************solar section**************** */
+    .values .values-container{
+        display: flex;
+    }
+    .solar .solar-container, .values .values-container{
+        flex-wrap: wrap;
+    }
+    .solar .solar-container .solar-item, .values .values-container .values-item{
+        width: 48%;
+        margin-right: 12px;
+        margin-bottom: 40px;
+    }
+    .solar .solar-container .solar-item:nth-of-type(2), .values .values-container .values-item:nth-of-type(2){
+        margin-right: 0;
+    }
+    .solar .solar-container .solar-item:nth-of-type(3), .values .values-container .values-item:nth-of-type(3){
+        margin: auto;
+    }
+    .fixed-bg-container{
+        width: 100%;
+        padding: 12px;
+    }
+
+    /* ****************energy section**************** */
+    .energy{
+        background-color: rgba(255, 187, 28, 0.05);
+    }
+    .energy .energy-container{
+        display: block;
+    }
+    .energy .energy-container .energy-content{
+        display: flex;
+    }
+    .energy .energy-container .energy-heading{
+        margin-right: 0;
+    }
+    .energy .energy-container .energy-content .energy-item:nth-child(1){
+        width: 100%;
+        margin-right: 32px;
+    }
+    .energy .energy-container .energy-heading, .energy .energy-container .energy-content{
+        margin-right: 0;
+    }
+
+    /* ****************feedback section**************** */
+     .feedback-container{
+        display: flex;
+        justify-content: space-between;
+     }
+    .feedback .feedback-content:first-of-type{
+        width: 30%;
+        padding: 0;
+        margin-right: 0;
+    }
+    .feedback .feedback-content:last-of-type{
+        width: 60%;
+        padding: 0;
+        margin-right: 0;
+    }
+
+    /* ****************footer section**************** */
+    .footer-content{
+        display: block;
+    }
+    .right-footer-text{
+        width: 100%;
+    }
+    .left-footer span{
+        margin-right: 20px;
+        margin-bottom: 20px;
+        position: relative;
+    }
+    .left-footer span::after{
+        content: '';
+        background-color: rgba(0, 0, 0, 0.57);
+        width: 1px;
+        height: 30px;
+        position: absolute;
+        top: 0;
+        right: -14px;
+        bottom: 20px;
+    }
+}
